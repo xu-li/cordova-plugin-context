@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="xu.li.cordova.context" version="0.0.1" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>Cordova Context Plugin</name>
+    <description>A plugin to get context information, e.g. cordova version, installed plugins, etc.</description>
+    <author>Xu Li</author>
+    <keywords>cordova,context,version</keywords>
+    <license>MIT License</license>
+
+    <!-- hooks -->
+    <hook type="before_build" src="script/before_build/010_fetch_versions.js" />
+
+    <js-module name="cordova-plugin-context" src="www/Context.js">
+        <clobbers target="cordova.plugins.Context" />
+    </js-module>
+</plugin>
